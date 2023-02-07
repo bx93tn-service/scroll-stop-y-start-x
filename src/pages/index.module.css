@@ -1,0 +1,31 @@
+.embla {
+  --slide-spacing: 1rem;
+  --slide-size: 50%;
+  --slide-height: 500px;
+  padding: 1.6rem;
+}
+
+.embla__viewport {
+    overflow: hidden;
+}
+
+.embla__container {
+  /* display: flex;
+  flex-direction: row;
+  height: auto;
+  margin-left: calc(var(--slide-spacing) * -1); */
+  display: grid;  
+  grid-auto-flow: column;  
+  grid-auto-columns: 33%; /* Each slide covers 80% of the viewport */
+  gap: 15px;
+  height: 300px;
+}
+
+.embla__slide {
+  /* flex: 0 0 500px; */
+  min-width: 0;
+  padding-left: var(--slide-spacing);
+  padding-top: var(--slide-spacing);
+  position: relative;
+  /* margin-left: 10px; */
+}
